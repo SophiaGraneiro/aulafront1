@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de voluntários</h1>
+        <nav>
+            <div class="logo">🤝🏼 Projeto mãos que Ajudam 🤝🏼</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul>
+                <li> <a href="index.html"> Início </a></li>
+                <li> <a href="cadastro.html"> Cadastro de voluntários </a></li>
+                <li> <a href="projeto.html"> Projeto de voluntários </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--hero section-->
+    <section class="hero hero-cadastro">
+    <div class="hero-content">
+    <h1>Cadastre-se como Voluntário</h1>
+    <p>Junte-se a nós e faça a diferença na vida de muitas pessoas atráves do Voluntáriado</p>
+    </div>
+    </section>
+
+    <!--formulario de cadastro-->
+    <main>
+        <section class="signup-section">
+            <h2>Formulário de Cadastro de Voluntários</h2>
+            <div class="sucess-message" id="sucessMensage">
+                Cadastro realizado com Sucesso!
+            </div>
+            <form id="volunteerForm" onsubmit="handleSubmit(event)">
+                
+                <fieldset> 
+                    <legend> Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="Nome:">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required >
+                    </div>
+
+                     <div class="form-group">
+                        <label for="telefone:">Telefone:</label>
+                        <input type="number" id="telefone" placeholder="() 9 9999-9999" name="telefone" required >
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label for="idade:">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="18" max="70" required >
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="disponibilidade">Quando você pode atuar como voluntário?</label>
+                        <select name="disponibilidade" id="disponibilidade" required>
+                            <option value="">Selecione</option>
+                            <option value="final-de-semana">Final de semana</option>
+                            <option value="dias-da-semana">Dias da semana</option>
+                            <option value="flexivel">Flexíveis</option>
+                            <option value="feriado">Feriado</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+            </form>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
